@@ -1,3 +1,3 @@
 
 # hash_table
-I made this hash table in C as part of the [https://github.com/IOOPM-UU/](ioopm) course together with [https://github.com/ExOster/](ExOster).
+I made this hash table in C as part of the [ioopm](https://github.com/IOOPM-UU/) course together with [ExOster](https://github.com/ExOster/).
