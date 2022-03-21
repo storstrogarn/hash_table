@@ -15,13 +15,13 @@ typedef union elem elem_t;
 
 union elem
 {
-	int i;
-	unsigned int u;
-	bool b;
-	float f;
-	void *p;
-	char *s;
-  
+    int i;
+    unsigned int u;
+    bool b;
+    float f;
+    void *p;
+    char *s;
+
 };
 
 
@@ -35,7 +35,7 @@ struct link
 
 typedef struct link link_t;
 typedef struct iter ioopm_list_iterator_t;
-typedef struct list ioopm_list_t; 
+typedef struct list ioopm_list_t;
 
 typedef bool(*ioopm_eq_function)(elem_t a, elem_t b);
 

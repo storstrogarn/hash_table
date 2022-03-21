@@ -11,7 +11,7 @@
 */
 
 typedef struct iter ioopm_list_iterator_t;
-typedef struct list ioopm_list_t; 
+typedef struct list ioopm_list_t;
 
 
 ioopm_list_iterator_t *ioopm_list_iterator(ioopm_list_t *list);

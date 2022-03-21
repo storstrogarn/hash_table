@@ -14,7 +14,7 @@
 typedef union elem elem_t;
 
 /// Meta: struct definition goes in C file
-typedef struct list ioopm_list_t; 
+typedef struct list ioopm_list_t;
 
 typedef bool(*ioopm_char_predicate)(elem_t value, void *extra);
 typedef void(*ioopm_apply_char_function)(elem_t *value, void *extra);

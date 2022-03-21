@@ -10,7 +10,7 @@
  * @brief Simple hash table that maps integer keys to string values.
  *
  * A simple hash table which utilizes an array of linked lists, which will expand upon the hash table's size reaching the LF limit.
- * The initial array size and LF limit can be adjusted at the top in hash_table.c 
+ * The initial array size and LF limit can be adjusted at the top in hash_table.c
  *
  *
  *
@@ -24,9 +24,9 @@ typedef struct hash_table ioopm_hash_table_t;
 typedef struct option ioopm_option_t;
 struct option
 {
-	bool success;
-	elem_t value;
-	elem_t key;
+    bool success;
+    elem_t value;
+    elem_t key;
 };
 
 typedef bool (*ioopm_predicate)(elem_t key, elem_t value, void *extra);

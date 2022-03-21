@@ -12,13 +12,13 @@
  * @file iterator.c
  * @author Oscar Johansson, and Johan Söderström
  * @date 24 Sep 2021
- * @brief A simple linked list that implements parts of the interface 
+ * @brief A simple linked list that implements parts of the interface
  * of `linked_list.h`. The functions that are not implemented will fail
  * at runtime with an assertion error, printing a message to stderr.
  */
 
 
- 
+
 
 
 ioopm_list_iterator_t *ioopm_list_iterator(ioopm_list_t *list)
@@ -26,36 +26,36 @@ ioopm_list_iterator_t *ioopm_list_iterator(ioopm_list_t *list)
     assert(list);
     ioopm_list_iterator_t *result = calloc(1, sizeof(ioopm_list_iterator_t));
     result->list = list;
-	result->current = list->head;
-    return result; 
+    result->current = list->head;
+    return result;
 }
 
 
 bool ioopm_iterator_has_next(ioopm_list_iterator_t *iter)
 {
-
     if (iter->current->next == NULL)
-    {
-        return false;
-    }
+        {
+            return false;
+        }
+
     return true;
 }
 
 
 elem_t ioopm_iterator_current(ioopm_list_iterator_t *iter)
 {
-  return iter->current->value;
+    return iter->current->value;
 }
 
 
 elem_t ioopm_iterator_next(ioopm_list_iterator_t *iter)
 {
     if (iter->current->next != NULL)
-    {
-    
-   iter->current = iter->current->next;
-   return(iter->current->value);
-    }
+        {
+            iter->current = iter->current->next;
+            return(iter->current->value);
+        }
+
     elem_t intmaximum;
     intmaximum.i=INT_MAX;
     return intmaximum;
