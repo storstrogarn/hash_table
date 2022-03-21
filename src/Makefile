@@ -4,6 +4,12 @@ Flags=-g -ggdb -Wall -std=c11 -pedantic
 MemFlags=--leak-check=full
 CallgrindFlags=--tool=callgrind
 StrDup=-D_XOPEN_SOURCE=700
+Format=astyle --options=./doc/apache.ini
+
+# Format
+format: ./*.c ./*.h
+	astyle  --style=gnu --indent=spaces=4 --delete-empty-lines --break-blocks $^
+	rm -f *.orig
 
 
 # Hash_table
