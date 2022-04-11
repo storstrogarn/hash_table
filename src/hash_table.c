@@ -201,7 +201,7 @@ void ioopm_hash_table_insert(ioopm_hash_table_t *ht, elem_t key, elem_t value)
 
 
 
-elem_t ioopm_hash_table_remove(ioopm_hash_table_t *ht, elem_t key)
+ioopm_option_t ioopm_hash_table_remove(ioopm_hash_table_t *ht, elem_t key)
 {
     int int_key = (ht->hash_function)(key);
     int bucket = abs(int_key) % ht->bucks;
@@ -217,21 +217,18 @@ elem_t ioopm_hash_table_remove(ioopm_hash_table_t *ht, elem_t key)
             if (pEntry->next == NULL)
                 {
                     entry_destroy(pEntry->next);
-                    return value;
                 }
             else
                 {
                     entry_t *tmp = pEntry->next;
                     pEntry->next = pEntry->next->next;
                     entry_destroy(tmp);
-                    return value;
                 }
+			return Success(value);
         }
     else
         {
-            elem_t empty;
-            empty.s = "NO";
-            return empty;
+            return Failure();
         }
 }
 

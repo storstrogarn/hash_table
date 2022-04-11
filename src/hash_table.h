@@ -63,7 +63,7 @@ ioopm_option_t ioopm_hash_table_lookup(ioopm_hash_table_t *ht, elem_t key);
 /// @param ht hash table operated upon
 /// @param key key to remove
 /// @return the value mapped to by key, if value is not in ht, return "NO".
-elem_t ioopm_hash_table_remove(ioopm_hash_table_t *ht, elem_t key);
+ioopm_option_t ioopm_hash_table_remove(ioopm_hash_table_t *ht, elem_t key);
 
 
 /// @brief returns the number of key => value entries in the hash table
